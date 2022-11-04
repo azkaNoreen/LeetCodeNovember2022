@@ -1,0 +1,17 @@
+Reverse Vowels of a String
+class Solution:
+    def reverseVowels(self, s: str) -> str:
+        vowels=[]
+        for a in s:
+            if a in ['a','e','i','o','u','A','E','I','O','U']:
+                
+                vowels.append(a)
+        print(vowels)
+        alphabets=""
+        for a in s:
+            if a in ['a','e','i','o','u','A','E','I','O','U']:
+                alphabets=alphabets+vowels.pop()
+            else:
+                alphabets=alphabets+a
+        
+        return alphabets
