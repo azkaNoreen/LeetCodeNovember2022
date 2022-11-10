@@ -1,0 +1,19 @@
+class Solution {
+public:
+    string removeDuplicates(string s) {
+        vector<char> stacks;
+        for (int i=0;i<s.length();i++){
+            if(!stacks.empty() && s[i]==stacks.back())
+            {
+                stacks.pop_back();
+                
+            }
+            else{
+                stacks.push_back(s[i]);
+            }
+        }
+        string ans(stacks.begin(), stacks.end());
+
+        return ans;
+    }
+};
