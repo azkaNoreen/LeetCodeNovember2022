@@ -1,0 +1,21 @@
+class Solution {
+public:
+    bool uniqueOccurrences(vector<int>& arr) {
+         unordered_map <int,int> stringSet ;
+
+        for (int num : arr) {
+            stringSet[num]++;
+        }
+            unordered_set<int> :: iterator itr;
+
+        unordered_set<int> freqSet;
+        for (auto [key, value] : stringSet) {
+            freqSet.insert(value);
+        }
+        
+        if(freqSet.size()==stringSet.size())
+            return true;
+        else
+        return false;
+    }
+};
